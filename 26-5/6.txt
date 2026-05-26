@@ -1,0 +1,47 @@
+using System.Text;
+
+public static class Identifier
+{
+    public static string Clean(string identifier)
+    {
+        StringBuilder result = new StringBuilder();
+        bool capitalizeNext = false;
+
+        foreach (char c in identifier)
+        {
+            if (char.IsWhiteSpace(c))
+            {
+                result.Append('_');
+            }
+            else if (char.IsControl(c))
+            {
+                result.Append("CTRL");
+            }
+            else if (c == '-')
+            {
+                capitalizeNext = true;
+            }
+            else if (capitalizeNext && char.IsLetter(c))
+            {
+                result.Append(char.ToUpper(c));
+                capitalizeNext = false;
+            }
+            else if (char.IsLetter(c) || c == '_')
+            {
+                // excluir letras griegas minúsculas
+                if (c < 'α' || c > 'ω')
+                {
+                    result.Append(c);
+                }
+
+                capitalizeNext = false;
+            }
+            else
+            {
+                capitalizeNext = false;
+            }
+        }
+
+        return result.ToString();
+    }
+}
