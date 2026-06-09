@@ -1,0 +1,46 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Dictionary<string, int> votos = new Dictionary<string, int>()
+{
+    {"Opcion 1", 0},
+    {"Opcion 2", 0},
+    {"Opcion 3", 0}
+};
+
+            while (true)
+            {
+                Console.WriteLine("1 - Opcion 1");
+                Console.WriteLine("2 - Opcion 2");
+                Console.WriteLine("3 - Opcion 3");
+                Console.Write("Voto (o 'terminar'): ");
+
+                string voto = Console.ReadLine().ToLower();
+
+                if (voto == "terminar")
+                    break;
+
+                if (voto == "1") votos["Opcion 1"]++;
+                else if (voto == "2") votos["Opcion 2"]++;
+                else if (voto == "3") votos["Opcion 3"]++;
+            }
+
+            string ganador = "";
+            int maximo = -1;
+
+            foreach (var opcion in votos)
+            {
+                if (opcion.Value > maximo)
+                {
+                    maximo = opcion.Value;
+                    ganador = opcion.Key;
+                }
+            }
+
+            Console.WriteLine($"Ganó: {ganador}");
+        }
+    }
+}

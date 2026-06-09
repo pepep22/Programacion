@@ -1,0 +1,15 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Ingresá tu nombre: ");
+            string nombre = Console.ReadLine();
+
+            nombre = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(nombre.ToLower());
+
+            Console.WriteLine("Hola " + nombre);
+        }
+    }
+}

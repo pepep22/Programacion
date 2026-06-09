@@ -1,0 +1,24 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Random rnd = new Random();
+
+            int mayores = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int num = rnd.Next(1, 101);
+
+                Console.WriteLine(num);
+
+                if (num > 50)
+                    mayores++;
+            }
+
+            Console.WriteLine($"Mayores a 50: {mayores}");
+        }
+    }
+}

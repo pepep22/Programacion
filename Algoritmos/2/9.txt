@@ -1,0 +1,24 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Número: ");
+            int num = int.Parse(Console.ReadLine());
+
+            bool primo = num > 1;
+
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    primo = false;
+                    break;
+                }
+            }
+
+            Console.WriteLine(primo ? "Es primo" : "No es primo");
+        }
+    }
+}

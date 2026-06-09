@@ -1,0 +1,26 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Random rnd = new Random();
+            int secreto = rnd.Next(1, 11);
+            int intento;
+
+            do
+            {
+                Console.Write("Adiviná el número (1-10): ");
+                intento = int.Parse(Console.ReadLine());
+
+                if (intento < secreto)
+                    Console.WriteLine("Es mayor.");
+                else if (intento > secreto)
+                    Console.WriteLine("Es menor.");
+
+            } while (intento != secreto);
+
+            Console.WriteLine("¡Correcto!");
+        }
+    }
+}

@@ -1,0 +1,19 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            string nombre;
+
+            do
+            {
+                Console.Write("Ingresá un nombre: ");
+                nombre = Console.ReadLine();
+
+            } while (nombre.Length <= 10);
+
+            Console.WriteLine("Nombre válido: " + nombre);
+        }
+    }
+}

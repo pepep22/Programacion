@@ -1,0 +1,23 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Ingresá una frase: ");
+            string frase = Console.ReadLine().ToLower();
+
+            int vocales = 0;
+
+            foreach (char c in frase)
+            {
+                if ("aeiou".Contains(c))
+                {
+                    vocales++;
+                }
+            }
+
+            Console.WriteLine("Cantidad de vocales: " + vocales);
+        }
+    }
+}

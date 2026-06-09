@@ -1,0 +1,16 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Número: ");
+            string numero = Console.ReadLine();
+
+            foreach (char digito in numero)
+            {
+                Console.WriteLine(digito);
+            }
+        }
+    }
+}

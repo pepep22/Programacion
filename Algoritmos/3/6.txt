@@ -1,0 +1,17 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Palabra: ");
+            string palabra = Console.ReadLine().ToUpper();
+
+            foreach (char letra in palabra)
+            {
+                int posicion = letra - 'A' + 1;
+                Console.Write(posicion + " ");
+            }
+        }
+    }
+}

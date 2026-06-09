@@ -1,0 +1,24 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            List<string> nombres = new List<string>();
+
+            while (true)
+            {
+                Console.Write("Nombre: ");
+                string nombre = Console.ReadLine();
+
+                if (nombres.Contains(nombre))
+                {
+                    Console.WriteLine($"Ingresaste {nombres.Count} nombres antes del duplicado.");
+                    break;
+                }
+
+                nombres.Add(nombre);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Nombre: ");
+            string nombre = Console.ReadLine();
+
+            int edad;
+
+            while (!int.TryParse(Console.ReadLine(), out edad))
+            {
+                Console.Write("Edad inválida. Ingresá nuevamente: ");
+            }
+
+            string mail;
+
+            do
+            {
+                Console.Write("Mail: ");
+                mail = Console.ReadLine();
+
+            } while (!mail.Contains("@"));
+
+            Console.WriteLine("Datos válidos.");
+        }
+    }
+}

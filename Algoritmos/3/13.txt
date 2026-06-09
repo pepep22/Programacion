@@ -1,0 +1,16 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Palabra: ");
+            string palabra = Console.ReadLine();
+
+            for (int i = 1; i <= palabra.Length; i++)
+            {
+                Console.WriteLine(palabra.Substring(0, i));
+            }
+        }
+    }
+}

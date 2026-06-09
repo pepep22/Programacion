@@ -1,0 +1,21 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Frase: ");
+            string frase = Console.ReadLine();
+
+            string[] palabras = frase.Split(' ');
+
+            foreach (string palabra in palabras)
+            {
+                char[] letras = palabra.ToCharArray();
+                Array.Reverse(letras);
+
+                Console.Write(new string(letras) + " ");
+            }
+        }
+    }
+}

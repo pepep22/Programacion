@@ -1,0 +1,31 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Ingresá tu edad: ");
+            int edad = int.Parse(Console.ReadLine());
+
+            bool votar = edad >= 18;
+            bool manejar = edad >= 17;
+
+            if (votar && manejar)
+            {
+                Console.WriteLine("Puede votar y manejar.");
+            }
+            else if (votar)
+            {
+                Console.WriteLine("Puede votar.");
+            }
+            else if (manejar)
+            {
+                Console.WriteLine("Puede manejar.");
+            }
+            else
+            {
+                Console.WriteLine("No puede votar ni manejar.");
+            }
+        }
+    }
+}

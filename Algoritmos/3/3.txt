@@ -1,0 +1,24 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Palabra: ");
+            string palabra = Console.ReadLine().ToLower();
+
+            Console.Write("Letra: ");
+            char letra = char.Parse(Console.ReadLine().ToLower());
+
+            int contador = 0;
+
+            foreach (char c in palabra)
+            {
+                if (c == letra)
+                    contador++;
+            }
+
+            Console.WriteLine($"Aparece {contador} veces.");
+        }
+    }
+}

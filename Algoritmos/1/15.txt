@@ -1,0 +1,25 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            while (true)
+            {
+                Console.Write("Contraseña: ");
+                string c1 = Console.ReadLine();
+
+                Console.Write("Repetí la contraseña: ");
+                string c2 = Console.ReadLine();
+
+                if (c1 == c2)
+                {
+                    Console.WriteLine("Acceso permitido");
+                    break;
+                }
+
+                Console.WriteLine("No coinciden. Intentá nuevamente.");
+            }
+        }
+    }
+}

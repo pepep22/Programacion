@@ -1,0 +1,29 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            string contraseña = "secreta";
+            bool adivino = false;
+
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.Write("Intento " + i + ": ");
+                string ingreso = Console.ReadLine();
+
+                if (ingreso == contraseña)
+                {
+                    Console.WriteLine("¡Correcto!");
+                    adivino = true;
+                    break;
+                }
+            }
+
+            if (!adivino)
+            {
+                Console.WriteLine("Se acabaron los intentos.");
+            }
+        }
+    }
+}

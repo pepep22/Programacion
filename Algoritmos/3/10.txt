@@ -1,0 +1,30 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            string usuarioCorrecto = "admin";
+            string contraseñaCorrecta = "1234";
+
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.Write("Usuario: ");
+                string usuario = Console.ReadLine();
+
+                Console.Write("Contraseña: ");
+                string contraseña = Console.ReadLine();
+
+                if (usuario == usuarioCorrecto &&
+                    contraseña == contraseñaCorrecta)
+                {
+                    Console.WriteLine("Bienvenido.");
+                    break;
+                }
+
+                if (i == 3)
+                    Console.WriteLine("Acceso denegado.");
+            }
+        }
+    }
+}

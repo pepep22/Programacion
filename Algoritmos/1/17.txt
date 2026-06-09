@@ -1,0 +1,23 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Ingresá una oración: ");
+            string oracion = Console.ReadLine().ToLower();
+
+            int contador = 0;
+
+            foreach (char letra in oracion)
+            {
+                if (letra == 'a')
+                {
+                    contador++;
+                }
+            }
+
+            Console.WriteLine("Cantidad de letras 'a': " + contador);
+        }
+    }
+}

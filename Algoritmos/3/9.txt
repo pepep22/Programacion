@@ -1,0 +1,26 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Palabra: ");
+            string palabra = Console.ReadLine().ToLower();
+
+            Dictionary<char, int> letras = new Dictionary<char, int>();
+
+            foreach (char c in palabra)
+            {
+                if (!letras.ContainsKey(c))
+                    letras[c] = 0;
+
+                letras[c]++;
+            }
+
+            foreach (var item in letras)
+            {
+                Console.WriteLine($"{item.Key}: {item.Value}");
+            }
+        }
+    }
+}

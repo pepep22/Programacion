@@ -1,0 +1,26 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            List<string> nombres = new List<string>();
+
+            while (true)
+            {
+                Console.Write("Nombre: ");
+                string nombre = Console.ReadLine();
+
+                if (nombre.ToLower() == "fin")
+                    break;
+
+                nombres.Add(nombre);
+            }
+
+            foreach (string nombre in nombres)
+            {
+                Console.WriteLine($"Hola {nombre}");
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            while (true)
+            {
+                Console.Write("Frase: ");
+                string frase = Console.ReadLine();
+
+                if (frase == "agusfortnite2008")
+                    break;
+
+                char[] vocales = { 'a', 'e', 'i', 'o', 'u' };
+
+                foreach (char vocal in vocales)
+                {
+                    string resultado = frase;
+
+                    foreach (char v in vocales)
+                    {
+                        resultado = resultado.Replace(v, vocal);
+                        resultado = resultado.Replace(char.ToUpper(v), char.ToUpper(vocal));
+                    }
+
+                    Console.WriteLine(resultado);
+                }
+
+                Console.WriteLine();
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+namespace q
+{
+    class Program
+    {
+        static void Main()
+        {
+            int encontrados = 0;
+            int numero = 1;
+
+            while (encontrados < 50)
+            {
+                bool por2 = numero % 2 == 0;
+                bool por5 = numero % 5 == 0;
+
+                if (por2 ^ por5)
+                {
+                    Console.WriteLine(numero);
+                    encontrados++;
+                }
+
+                numero++;
+            }
+        }
+    }
+}
