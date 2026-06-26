@@ -44,14 +44,21 @@
         {
             int a;
             int q;
+            int s;
             Console.WriteLine("¿Cuantos postulantes hay?");
             a = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("cuantos son mujeres?");
             q = Convert.ToInt16(Console.ReadLine());
+            if (q > a)
+            {
+                q = 0;
+            }
             Console.Write("la cantidad de mujeres son: ");
-            Console.WriteLine(q);
+            Console.Write(q / 10);
+            Console.WriteLine("%");
             Console.Write("la cantidad de hombres es: ");
-            Console.WriteLine(a-q);
+            Console.Write((a-q)/10);
+            Console.WriteLine("%");
         }
     }
 }
