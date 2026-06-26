@@ -1,4 +1,4 @@
-1) namespace o
+2) namespace o
 {
     internal class Program
     {
@@ -36,4 +36,4 @@
     }
 }
 
-2)
+3)
