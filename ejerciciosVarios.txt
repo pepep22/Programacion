@@ -36,4 +36,22 @@
     }
 }
 
-3)
+3)namespace o
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            int q;
+            Console.WriteLine("¿Cuantos postulantes hay?");
+            a = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("cuantos son mujeres?");
+            q = Convert.ToInt16(Console.ReadLine());
+            Console.Write("la cantidad de mujeres son: ");
+            Console.WriteLine(q);
+            Console.Write("la cantidad de hombres es: ");
+            Console.WriteLine(a-q);
+        }
+    }
+}
