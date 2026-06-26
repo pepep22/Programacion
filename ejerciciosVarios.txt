@@ -8,8 +8,6 @@
             int q;
             int s;
             int r;
-            int x;
-            int i;
             bool p;
             string z;
             p = true;
@@ -20,9 +18,9 @@
                 q = Convert.ToInt16(Console.ReadLine());
                 s = 2 * a + 2 * q;
                 Console.WriteLine("Ingrese las medidas del area del rectangulo a medir:");
-                i = Convert.ToInt16(Console.ReadLine());
-                x = Convert.ToInt16(Console.ReadLine());
-                r = x * i;
+                a = Convert.ToInt16(Console.ReadLine());
+                q = Convert.ToInt16(Console.ReadLine());
+                r = a * q;
                 Console.Write("El perimetro mide ");
                 Console.WriteLine(s);
                 Console.Write("El area mide ");
